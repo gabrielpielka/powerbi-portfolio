@@ -91,11 +91,15 @@ Some visuals are conceptual due to missing source data, but demonstrate design t
 
 ##  Data Model & Logic
 
-- Data sources were primarily Excel-based, focusing on transformation, modeling and automation within Power BI.
-- Star-schema-based data model
-- Separate fact tables for finance, applications and operations
-- Central date dimension
-- Clean relationship structure
+- Data sources were primarily Excel-based, focusing on transformation, modeling and automation within Power BI
+- Star-schema-based data model with two fact tables:
+  - FACT_Jelentkezések (applications and recruitment data)
+  - FACT_SzámlákTémák (financial and invoicing-related data)
+- Shared dimension tables for Date and Partners
+- Applicant dimension (DIM_Tagok) connected exclusively to the applications fact table
+- All relationships implemented as many-to-one (fact-to-dimension), following Power BI best practices
+- Clean, single-directional relationship structure to ensure predictable filtering behavior
+
 
 ## DAX & Power Query
 
