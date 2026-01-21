@@ -1,0 +1,63 @@
+-- Revenue (net)
+Bevétel =
+SUM('FACT_SzámlákTémák'[FACT_Számlák.Nettó össz.])
+
+-- Labor cost (student wages)
+Diákbér =
+SUM('FACT_SzámlákTémák'[Bruttó diák össz.])
+
+-- Profit (net revenue minus labor cost)
+Profit =
+[Bevétel] - [Diákbér]
+
+-- Profit margin
+Profitráta (%) =
+DIVIDE([Profit], [Bevétel], BLANK())
+
+-- Applicant status per person (priority-based)
+Jelentkezési állapot (egyedi) =
+VAR AllStatuses =
+    CALCULATETABLE(
+        VALUES('FACT_Jelentkezések'[Állapot]),
+        ALLEXCEPT('FACT_Jelentkezések', 'FACT_Jelentkezések'[Tag ID])
+    )
+RETURN
+    SWITCH(
+        TRUE(),
+        "Sikeres lezárás" IN AllStatuses, "Sikeres",
+        "Sikertelen lezárás" IN AllStatuses, "Sikertelen",
+        "Folyamatban"
+    )
+
+-- In-progress applicants (distinct)
+Folyamatban lévő diák jelentkezések száma (egyedi) =
+CALCULATE(
+    DISTINCTCOUNT('FACT_Jelentkezések'[Tag ID]),
+    FILTER(
+        'FACT_Jelentkezések',
+        ISBLANK('FACT_Jelentkezések'[Állapot])
+            || NOT ('FACT_Jelentkezések'[Állapot] IN { "Sikeres lezárás", "Sikertelen lezárás" })
+    )
+)
+
+-- Successful applicants (priority-based)
+Sikeres jelentkezések száma (prioritásos) =
+SUMX(
+    VALUES('FACT_Jelentkezések'[Tag ID]),
+    IF([Jelentkezési állapot (egyedi)] = "Sikeres", 1, 0)
+)
+
+-- Unsuccessful applicants (priority-based)
+Sikertelen jelentkezések száma (prioritásos) =
+SUMX(
+    VALUES('FACT_Jelentkezések'[Tag ID]),
+    IF([Jelentkezési állapot (egyedi)] = "Sikertelen", 1, 0)
+)
+
+-- Popularity index (success vs failure)
+Népszerűségi index =
+DIVIDE(
+    [Sikeres diák jelentkezések száma (egyedi)],
+    [Sikertelen diák jelentkezések száma (egyedi)],
+    BLANK()
+)
