@@ -29,6 +29,9 @@ The report is structured as a multi-page interactive dashboard covering financia
 - Drillthrough pages for deeper analysis
 - Conditional formatting and dynamic visuals
 - Bookmark-based visual switching
+  
+![Report Navigation](screenshots/01_cover_page.jpeg)
+
 
 ## Pages & Functionality
 
@@ -37,6 +40,8 @@ The report is structured as a multi-page interactive dashboard covering financia
 - Dynamic pie chart switching between Profit / Hours / Revenue
 - Implemented using overlapping visuals controlled by visual visibility
 - Slicers: Date, Partners, Project Managers
+
+![Project Managers Overview](screenshots/02_project_managers_overview.jpeg)
 
 ### 2 Partners Overview
 - Identical analytical structure as the Project Managers page
@@ -60,6 +65,8 @@ The report is structured as a multi-page interactive dashboard covering financia
 - Gauge visual showing target achievement vs previous year
 - Dynamic coloring based on performance
 
+![Revenue Trends & YTD](screenshots/03_revenue_trends_ytd_forecast.png)
+
 ### 6 Recruitment Funnel Analysis
 - Analysis of applications:
   - Successful
@@ -68,6 +75,9 @@ The report is structured as a multi-page interactive dashboard covering financia
 - Drillthrough to failure analysis using:
   - Donut chart
   - Decomposition tree chart
+ 
+![Applications Overview](screenshots/04_applications_overview_funnel.png)
+![Failed Applications Drillthrough](screenshots/05_failed_applications_drillthrough.jpeg)
 
 ### 7 Partner Popularity Analysis
 - Partner ranking based on application volume
@@ -85,6 +95,8 @@ The report is structured as a multi-page interactive dashboard covering financia
 - Managers validate data directly in Power BI
 - Approval or rejection based on verified metrics
 - Demonstrates Power BI + Power Apps integration
+
+![Commission Request Workflow](screenshots/06_commission_request_powerapps.jpeg)
 
 ### 9 Ideas & Future Enhancements
 Conceptual and future-ready ideas:
