@@ -105,10 +105,10 @@ Some visuals are conceptual due to missing source data, but demonstrate design t
 ## DAX & Power Query
 
 - Custom DAX measures for:
-  - Profit
-  - Profit margin
-  - Trend indicators
-  - KPI comparisons
+  - Financial KPIs (revenue, labor cost, profit, profit margin)
+  - Recruitment and application funnel metrics
+  - Status-based logic to determine a single, prioritized outcome per applicant, avoiding duplicate counting
+  - Distinct counting and ratio-based indicators (e.g. popularity index)
 - Power Query transformations for:
   - Data cleaning
   - Standardization
