@@ -67,11 +67,15 @@ The report is structured as a multi-page interactive dashboard covering financia
   - In progress
 - Drillthrough to failure analysis using:
   - Donut chart
-  - Waterfall chart
+  - Decomposition tree chart
 
 ### 7 Partner Popularity Analysis
-- Ranking partners based on number of applications
-- Visuals for:
+- Partner ranking based on application volume
+- Main stacked bar chart showing partners ranked by total number of applications
+  - Successful applications (green)
+  - Unsuccessful applications (red)
+  - In-progress applications (blue)
+- Additional stacked bar charts:
   - Top 5 most popular partners
   - Top 5 least popular partners
 
