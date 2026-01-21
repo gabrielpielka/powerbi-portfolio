@@ -6,7 +6,7 @@ The project demonstrates not only reporting and visualization skills, but also d
 
 ## Project Overview
 This portfolio project is based on a real-world business intelligence solution developed for a workforce management and staffing organization.  
-The entire solution was designed and implemented end-to-end by me, covering data collection, transformation, data modeling, DAX measure development, visual design, and Power Apps integration.
+The entire solution was designed and implemented end-to-end by me, covering data collection, data transformation, data modeling, DAX measure development, visual design, and Power Apps integration.
 
 All company names, personal data, logos, and other sensitive information have been fully anonymized, replaced, or removed.
 
@@ -32,7 +32,7 @@ The report is structured as a multi-page interactive dashboard covering financia
 ## Pages & Functionality
 
 ### 1 Project Managers Overview
-- Financial summary table: Revenue, Student Cost, Profit, Hours
+- Financial summary table: Revenue, Workforce Cost, Profit, Hours
 - Dynamic donut chart switching between Profit / Hours / Revenue
 - Implemented using overlapping visuals controlled by visibility
 - Slicers: Date, Partners, Project Managers
