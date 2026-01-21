@@ -33,9 +33,9 @@ The report is structured as a multi-page interactive dashboard covering financia
 ## Pages & Functionality
 
 ### 1 Project Managers Overview
-- Financial summary table: Revenue, Workforce Cost, Profit, Hours
-- Dynamic donut chart switching between Profit / Hours / Revenue
-- Implemented using overlapping visuals controlled by visibility
+- Financial summary table with project managers as the primary dimension, showing Revenue, Workforce Cost, Profit and Hours
+- Dynamic pie chart switching between Profit / Hours / Revenue
+- Implemented using overlapping visuals controlled by visual visibility
 - Slicers: Date, Partners, Project Managers
 
 ### 2 Partners Overview
