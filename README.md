@@ -5,7 +5,8 @@ This repository presents a complex, end-to-end Power BI business intelligence so
 The project demonstrates not only reporting and visualization skills, but also data modeling, DAX, Power Query transformations, Power Apps integration, and Power Automate workflows.
 
 ## Project Overview
-This portfolio project is based on a real-world business intelligence solution developed for a workforce management and staffing organization.  
+This portfolio project is based on a real-world business intelligence solution developed for a workforce management and staffing organization.
+
 The entire solution was designed and implemented end-to-end by me, covering data collection, data transformation, data modeling, DAX measure development, visual design, and Power Apps integration.
 
 All company names, personal data, logos, and other sensitive information have been fully anonymized, replaced, or removed.
