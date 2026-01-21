@@ -114,6 +114,8 @@ Some visuals are conceptual due to missing source data, but demonstrate design t
   - Standardization
   - Transformation logic
 
+Example DAX measures: `snippets/key_measures.dax.txt`
+
 ##  Tools & Technologies
 
 - Power BI
